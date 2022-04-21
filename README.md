@@ -1,0 +1,2 @@
+# Forest-fire
+MPI project

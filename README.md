@@ -24,8 +24,9 @@ Lo stato di una cella può essere:
 |----------------|---------------|-----------------|
 |🌳|T|Albero|
 |🌱|i |Seme albero|
-||-|Vuoto
+||-|Vuoto|
 |🔥|*|Fuoco|
+
 La simulazione è eseguita un numero fissato di volte. Ad ogni fase di simulazione, i processori eseguono le 5 regole precedentemente descritte, e comunicano con i processori vicini per completare il calcolo.
 
 ## Breve descrizione della soluzione
@@ -58,8 +59,11 @@ Allo start-up del programma viene chiesto all'utente la modalità di stampa (Ese
 + 2 la soluzione viene mostrata in una modalità *"debug"* mostrando visivamente dove comunicano i processori tra loro.
 
 ![](https://i.imgur.com/JLG5EW6.png?1)
+
 Successivamente viene chiesta la grandezza della matrice sul quale si andrà a lavorare.
+
 ![](https://i.imgur.com/hcGC7NY.png)
+
 Infine si otterrà l'esecuzione desiderata con le relative stampe.
 
 ## Dettagli di implementazione
@@ -914,7 +918,9 @@ Day 2
 ```
 Essa contiene sia il fuoco propagato, che la generazione dei nuovi elementi.
 Ricapitolando in successione l'output ottenuto sarà il seguente(Questa volta con una grafica migliore):
+
 ![](https://i.imgur.com/dWMkdMp.png)
+
 Dovendo favorire il calcolo su più processori la soluzione proposta è eseguita su più processori che comunicano in modo intelligente.
 2 o più processori durante la loro esecuzione condividono delle *"criticità"* dovute al fatto che per completare la loro simulazione hanno bisogno di comunicare con i bordi superiori ed inferiori.
 A tal proposito durante l'esecuzione della funzione `fire_run_return_set()` vengono segnati quanti elementi sono presenti al bordo superiore e al bordo inferiore, definiti con il nome di `top` e `bot`, ed in contemporanea vengono salvati in un array l'indice di ogni cella che contiene fuoco.
@@ -970,6 +976,7 @@ I benchmarks sono stati lanciati su **Google Cloud Platform**, utilizzando 6 mac
 Con un totale di 24 vCPUs i risultati ottenuti sono:
 #### Strong scalability
 L'algoritmo è stato eseguito su una matrice 10.000x10.000
+
 |vCPUs|Tempo|Speed-up|
 |-|-|-|
 |1|32.928257|-|
@@ -996,10 +1003,12 @@ L'algoritmo è stato eseguito su una matrice 10.000x10.000
 |22|2.235581|14,73|
 |23|2.173712|15,15|
 |24|2.057124|16,00694|
+
 Come è possibile notare a 24 vCPU si ottiene uno Speed-up di ben 16, sebbene il risultato non è super notevole rimane un ottimo risultato.
 
 #### Weak scalability
 L'algoritmo è stato eseguito su una matrice **np**x10.000.000
+
 |vCPUs|Tempo|
 |-|-|
 |1|2.868079|
@@ -1026,5 +1035,6 @@ L'algoritmo è stato eseguito su una matrice **np**x10.000.000
 |22|5.127093|
 |23|5.197929|
 |24|5.142240|
+
 E' stato possibile dimostrare che dando lo stesso numero di elementi a n processori il tempo di esecuzione è pressoché identico.
 

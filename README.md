@@ -1,4 +1,4 @@
-﻿
+
 # MPI - Forest-fire simulation
 Il **forest-fire model** è stato creato utilizzando MPI durante il corso di *PROGRAMMAZIONE CONCORRENTE PARALLELA E SU CLOUD* all'università degli studi di Salerno
 ## Indice
@@ -1027,5 +1027,4 @@ L'algoritmo è stato eseguito su una matrice **np**x10.000.000
 |23|5.197929|
 |24|5.142240|
 E' stato possibile dimostrare che dando lo stesso numero di elementi a n processori il tempo di esecuzione è pressoché identico.
-
 

@@ -328,6 +328,8 @@ L'algoritmo è stato eseguito su una matrice 10.000x10.000
 |23|2.173712|15,15|
 |24|2.057124|16,00694|
 
+![](https://i.imgur.com/CaCf6N3.png)
+
 Come è possibile notare a 24 vCPU si ottiene uno Speed-up di ben 16, sebbene il risultato non è super notevole rimane un ottimo risultato.
 
 #### Weak scalability
@@ -359,6 +361,8 @@ L'algoritmo è stato eseguito su una matrice **np**x10.000.000
 |22|5.127093|
 |23|5.197929|
 |24|5.142240|
+
+![](https://i.imgur.com/UdS9jYU.png)
 
 E' stato possibile dimostrare che dando lo stesso numero di elementi a n processori il tempo di esecuzione è pressoché identico.
 

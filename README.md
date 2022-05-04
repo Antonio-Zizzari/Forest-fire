@@ -5,7 +5,7 @@ Il **forest-fire model** è stato creato utilizzando MPI durante il corso di *PR
 * [Introduzione](#introduzione)
 * [Breve descrizione della soluzione](#breve-descrizione-della-soluzione)
 * [Istruzioni per l'esecuzione](#istruzioni-per-lesecuzione)
-* [Prova della correttezza](#prova-della-correttezza)
+* [Logica funzionale](#logica-funzionale)
 * [Benchmarks](#benchmarks)
 
 ## Introduzione
@@ -66,7 +66,7 @@ Successivamente viene chiesta la grandezza della matrice sul quale si andrà a l
 Infine si otterrà l'esecuzione desiderata con le relative stampe.
 
 
-## Prova della correttezza
+## Logica funzionale
 Ad inizio programma, dopo che son state passate le variabili principali via linea di comando, il programma andrà a calcolare quanta porzione di array dovrà avere ogni processore **worker**, esso è definito da questa funzione:
 ```c
 //Suddivisione dominio per righe
